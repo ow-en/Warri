@@ -1,7 +1,7 @@
 ﻿<template>
-    <div class="loginPortal">
-        <Login />
-    </div>
+  <div class="loginPortal">
+    <Login/>
+  </div>
 </template>
 
 <script lang="ts">

@@ -1,17 +1,17 @@
 <template>
-    <div class="home">
-        <Login />
-    </div>
+  <div class="home">
+    <hello-world/>
+  </div>
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from "vue-property-decorator";
-    import Login from "@/components/Login.vue"; // @ is an alias to /src
+import { Component, Vue } from "vue-property-decorator";
+import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
-    @Component({
-        components: {
-            Login
-        }
-    })
-    export default class Home extends Vue { }
+@Component({
+  components: {
+    HelloWorld
+  }
+})
+export default class Home extends Vue {}
 </script>
