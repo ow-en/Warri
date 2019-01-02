@@ -9,10 +9,10 @@
           <b-icon pack="fab" icon="github"></b-icon>
         </a>
         <a class="navbar-item">
-          <b-icon pack="fab" icon="twitter"></b-icon>
+          <b-icon pack="fab" icon="twitter" type="is-info"></b-icon>
         </a>
         <a class="navbar-item">
-          <b-icon pack="fab" icon="medium"></b-icon>
+          <b-icon pack="fab" icon="medium" type="is-success"></b-icon>
         </a>
         <div class="navbar-burger burger">
           <span></span>
@@ -57,7 +57,7 @@ import UserMenuLoggedOut from "@/components/Menus/UserMenuLoggedOut.vue";
   }
 })
 export default class Navbar extends Vue {
-  loggedIn: boolean = false;
+  loggedIn: boolean = true;
 }
 </script>
 
