@@ -1,8 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import Login from "./views/LoginPortal.vue";
-import Restricted from "./Restricted.vue";
+import Restricted from "@/Restricted.vue";
 
 Vue.use(Router);
 
@@ -13,11 +12,14 @@ export default new Router({
     {
       path: "/",
       name: "login",
-      component: Login
+      meta: { layout: "empty" },
+      component: require("@/views/LoginPortal.vue").default
     },
     {
       path: "/restricted",
-      component: Restricted,
+      name: "restricted",
+      meta: { layout: "default" },
+      component: require("./Restricted.vue").default,
       children: [
         { path: "home", component: Home },
         {
