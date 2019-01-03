@@ -13,7 +13,7 @@
                 <div class="control has-icons-left">
                   <input class="input" type="email" placeholder="e.g. johndoe@gmail.com">
                   <span class="icon is-small is-left">
-                    <font-awesome-icon icon="envelope"/>
+                    <b-icon icon="envelope"/>
                   </span>
                 </div>
               </div>
@@ -22,7 +22,7 @@
                 <div class="control has-icons-left">
                   <input class="input" type="password" placeholder="******" required>
                   <span class="icon is-small is-left">
-                    <font-awesome-icon icon="lock"/>
+                    <b-icon icon="lock"/>
                   </span>
                 </div>
               </div>

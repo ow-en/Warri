@@ -34,13 +34,13 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <user-menu-logged-in v-if="loggedIn"/>
               <user-menu-logged-out v-if="!loggedIn"/>
               <a class="button is-primary" v-if="!loggedIn">Sign Up</a>
             </div>
           </div>
         </div>
       </div>
+      <user-menu-logged-in v-if="loggedIn"/>
     </nav>
   </div>
 </template>
@@ -63,6 +63,4 @@ export default class Navbar extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus" scoped>
-small {
-}
 </style>

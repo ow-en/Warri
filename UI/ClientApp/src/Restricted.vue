@@ -45,7 +45,7 @@
               <li>
                 <router-link to="/dashboard">
                   <span class="icon">
-                    <font-awesome-icon icon="tachometer-alt"/>
+                    <b-icon icon="tachometer-alt"/>
                   </span>
                   Dashboard
                 </router-link>
@@ -53,7 +53,7 @@
               <li>
                 <router-link to="/users">
                   <span class="icon">
-                    <font-awesome-icon icon="address-book"/>
+                    <b-icon icon="address-book"/>
                   </span>
                   Users
                 </router-link>
@@ -61,7 +61,7 @@
               <li>
                 <router-link to="/contributions">
                   <span class="icon">
-                    <font-awesome-icon icon="file-invoice-dollar"/>
+                    <b-icon icon="file-invoice-dollar"/>
                   </span>
                   Contributions
                 </router-link>
@@ -92,8 +92,7 @@ import UserMenuLoggedOut from "@/components/Menus/UserMenuLoggedOut.vue";
   }
 })
 export default class Restricted extends Vue {
-    loggedIn = false;
-
+  loggedIn = false;
 }
 </script>
 

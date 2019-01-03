@@ -35,7 +35,7 @@
             <a>Team Settings</a>
           </li>
           <li>
-            <a class="is-active">Manage Your Team</a>
+            <a>Manage Your Team</a>
             <ul>
               <li>
                 <a>Members</a>
