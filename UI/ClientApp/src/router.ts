@@ -1,11 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import Restricted from "@/Restricted.vue";
 
 Vue.use(Router);
 
-export default new Router({
+export const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
@@ -14,6 +13,22 @@ export default new Router({
       name: "login",
       meta: { layout: "empty" },
       component: require("@/views/LoginPortal.vue").default
+    },
+    {
+      path: "/registration",
+      name: "registration",
+      meta: { layout: "empty" },
+      component: require("@/components/Registration.vue").default
+    },
+    {
+      path: "/404",
+      name: "NotFound",
+      meta: { layout: "empty" },
+      component: require("@/components/PageNotFound.vue").default
+    },
+    {
+      path: "*",
+      redirect: "/404"
     },
     {
       path: "/restricted",
@@ -36,4 +51,18 @@ export default new Router({
   ],
   linkActiveClass: "active",
   linkExactActiveClass: "active"
+});
+
+// redirect to login page ('/') if not logged in and attempting to access a restricted page
+router.beforeEach((to, from, next) => {
+  // to and from are both route objects. must call `next`.
+  const publicPages = ["/", "registration"];
+  const authRequired = !publicPages.includes(to.path);
+  const loggedIn = localStorage.getItem("user");
+
+  if (authRequired && !loggedIn) {
+    return next("/");
+  }
+
+  next();
 });

@@ -1,6 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./router";
+import { router } from "@/helpers";
 import store from "./store";
 import "./registerServiceWorker";
 import "./../node_modules/bulma/css/bulma.css";
